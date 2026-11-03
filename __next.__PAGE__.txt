@@ -1,0 +1,51 @@
+1:"$Sreact.fragment"
+2:"/pure-beauty-blanes-web/_next/static/chunks/42onvq6nokjl2.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+8:"/pure-beauty-blanes-web/_next/static/chunks/0o-dxh6gqh1n6.js"
+9:I[30824,["$2","$8"],"default"]
+a:I[2971,["$2","$8"],"default"]
+b:I[37778,["$2","$8"],"SceneView"]
+12:"ViewportBoundary"
+13:I[97367,["$2"],"$12"]
+14:"MetadataBoundary"
+15:I[97367,["$2"],"$14"]
+16:"$Sreact.suspense"
+:HL["/pure-beauty-blanes-web/_next/static/chunks/1-7r1_msg9ep9.css","style"]
+6:X
+7:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","$L9",null,{"children":[["$","$La",null,{}],["$","main",null,{"id":"contenido","children":[["$","$Lb","inicio",{"s":{"kind":"arrival","id":"inicio","n":"00","label":"Inicio","a":{"src":"/media/facial-sonrisa.jpg","alt":"Mujer sonriendo con la piel cuidada"},"kicker":"Centro de estética avanzado · Blanes","title":"Pure Beauty","sub":"Estudios 100% personalizados"}}],["$","$Lb","facial",{"s":{"kind":"pullback","id":"facial","n":"01","label":"Facial","a":{"src":"/media/facial-calma.jpg","alt":"Mujer con los ojos cerrados disfrutando de un cuidado facial"},"origin":"55% 40%","b":{"src":"/media/facial-cuidado.jpg","alt":"Cuidado facial"},"title":"Ama y cuida tu piel","sub":"Tratamientos faciales personalizados para cada tipo de piel, también la sensible.","cta":{"label":"Pedir cita","href":"tel:+34630472046"}}}],["$","$Lb","laser",{"s":{"kind":"depth","id":"laser","n":"02","label":"Láser","back":{"src":"/media/laser-tratamiento.jpg","alt":"Tratamiento láser facial con gafas de protección"},"cards":[{"src":"/media/laser-hifu.jpg","alt":"Tratamiento con láser HIFU"}],"title":"Tecnología láser y HIFU","sub":"Equipos de tecnología láser y un equipo con años de experiencia en su manejo."}}],["$","$Lb","servicios",{"s":{"kind":"list","id":"servicios","n":"03","label":"Servicios","back":{"src":"/media/cosmetica-janssen.jpg","alt":"Productos Janssen Cosmetics para piel sensible"},"title":"Todo lo que *te ofrecemos*","groups":[{"name":"Facial y láser","items":[{"name":"Tratamientos faciales","detail":"Personalizados según tu tipo de piel"},{"name":"Tratamientos láser","detail":"Para los problemas de la piel"},{"name":"Láser HIFU","detail":"Ultrasonidos focalizados"}]},{"name":"Corporal y bienestar","items":[{"name":"Tratamientos corporales","detail":"Estudio 100% personalizado"},{"name":"Tratamientos dietéticos","detail":"Asesoramiento y seguimiento"},{"name":"Nutricosmética","detail":"Belleza desde el interior"}]},{"name":"Productos","items":[{"name":"Janssen Cosmetics","detail":"Cosmética profesional para la piel"},{"name":"Perfumes Essens","detail":"Catálogo disponible en el centro"}]}],"note":"Cada tratamiento empieza con un estudio personalizado. Precios y disponibilidad por teléfono.","cta":"$7:0:1:d:r:props:children:0:props:children:1:props:children:1:props:s:cta"}}],"$Lc"]}],"$Ld","$Le"]}],["$Lf"],"$L10"]}],"p":"$@11","v":null,"s":"$6"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/pure-beauty-blanes-web/_next/static/chunks/1-7r1_msg9ep9.css","precedence":"next"}],["$","script","script-0",{"src":"/pure-beauty-blanes-web/_next/static/chunks/42onvq6nokjl2.js","async":true}]],["$","html",null,{"lang":"es","className":"_4ILUJW_variable _8m_T-q_variable","children":["$","body",null,{"children":[["$","a",null,{"href":"#contenido","className":"fixed left-4 top-[-60px] z-[100] bg-accent px-4 py-2 text-deep focus:top-4","children":"Saltar al contenido"}],["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BeautySalon\",\"name\":\"Pure Beauty · Centro de estética avanzado\",\"url\":\"https://durducco-source.github.io/pure-beauty-blanes-web/\",\"telephone\":\"+34630472046\",\"email\":\"centro.purebeauty@gmail.com\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Carrer del Forn de la Calç, 12\",\"addressLocality\":\"Blanes\",\"postalCode\":\"17300\",\"addressRegion\":\"Girona\",\"addressCountry\":\"ES\"},\"openingHoursSpecification\":[{\"@type\":\"OpeningHoursSpecification\",\"dayOfWeek\":[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"],\"opens\":\"10:00\",\"closes\":\"20:00\"},{\"@type\":\"OpeningHoursSpecification\",\"dayOfWeek\":\"Saturday\",\"opens\":\"10:00\",\"closes\":\"14:00\"}],\"sameAs\":[\"https://www.instagram.com/centro.purebeauty/\"]}"}}]]}]}]]}],"p":"$@5","v":null,"s":"$6"},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L13",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#090c0b"}]]}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$16",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Pure Beauty · Centro de estética avanzado en Blanes | Tratamientos faciales, corporales y láser"}],["$","meta","1",{"name":"description","content":"Pure Beauty, centro de estética avanzado en Blanes (C/ Forn de la Calç, 12). Tratamientos faciales, corporales y dietéticos, tecnología láser y HIFU, cosmética Janssen Cosmetics. Pide cita: 630 47 20 46."}],["$","meta","2",{"name":"keywords","content":"centro de estética Blanes,tratamientos faciales Blanes,láser Blanes,HIFU Blanes,Janssen Cosmetics Blanes,Pure Beauty"}],["$","link","3",{"rel":"canonical","href":"https://durducco-source.github.io/pure-beauty-blanes-web/"}],["$","meta","4",{"property":"og:title","content":"Pure Beauty · Centro de estética avanzado en Blanes | Tratamientos faciales, corporales y láser"}],["$","meta","5",{"property":"og:description","content":"Pure Beauty, centro de estética avanzado en Blanes (C/ Forn de la Calç, 12). Tratamientos faciales, corporales y dietéticos, tecnología láser y HIFU, cosmética Janssen Cosmetics. Pide cita: 630 47 20 46."}],"$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26"]}]}],null]}],"$L27"]}],"p":"$@28","v":null,"s":"$6"}},"a":"$@29","u":"$@2a","b":"ojLE_Vo5iNqY7v2eRwnlT"}
+2b:I[37778,["$2","$8"],"Footer"]
+2c:I[44244,["$2","$8"],"default"]
+2d:I[97367,["$2"],"OutletBoundary"]
+2f:I[27201,["$2"],"IconMark"]
+c:["$","$Lb","cita",{"s":{"kind":"finale","id":"cita","n":"04","label":"Cita","a":{"src":"/media/facial-cuidado.jpg","alt":"Cuidado facial en Pure Beauty"},"title":"Tu piel *te lo agradecerá*","ctas":[{"label":"Llamar y pedir cita","href":"tel:+34630472046"},{"label":"Cómo llegar","href":"https://www.google.com/maps/dir/?api=1&destination=Carrer+del+Forn+de+la+Cal%C3%A7+12,+17300+Blanes","external":true},{"label":"Escribir un email","href":"mailto:centro.purebeauty@gmail.com"}],"info":[{"label":"Dirección","value":"C/ Forn de la Calç, 12 · Blanes","href":"https://www.google.com/maps/dir/?api=1&destination=Carrer+del+Forn+de+la+Cal%C3%A7+12,+17300+Blanes"},{"label":"Horario","value":"L–V 10–20 h · S 10–14 h"}]}}]
+d:["$","$L2b",null,{}]
+e:["$","$L2c",null,{}]
+f:["$","script","script-0",{"src":"/pure-beauty-blanes-web/_next/static/chunks/0o-dxh6gqh1n6.js","async":true}]
+10:["$","$L2d",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@2e"}]}]
+17:["$","meta","6",{"property":"og:url","content":"https://durducco-source.github.io/pure-beauty-blanes-web/"}]
+18:["$","meta","7",{"property":"og:site_name","content":"Pure Beauty"}]
+19:["$","meta","8",{"property":"og:locale","content":"es_ES"}]
+1a:["$","meta","9",{"property":"og:image","content":"https://durducco-source.github.io/pure-beauty-blanes-web/media/og-purebeauty.jpg"}]
+1b:["$","meta","10",{"property":"og:image:width","content":"1200"}]
+1c:["$","meta","11",{"property":"og:image:height","content":"630"}]
+1d:["$","meta","12",{"property":"og:type","content":"website"}]
+1e:["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}]
+1f:["$","meta","14",{"name":"twitter:title","content":"Pure Beauty · Centro de estética avanzado en Blanes | Tratamientos faciales, corporales y láser"}]
+20:["$","meta","15",{"name":"twitter:description","content":"Pure Beauty, centro de estética avanzado en Blanes (C/ Forn de la Calç, 12). Tratamientos faciales, corporales y dietéticos, tecnología láser y HIFU, cosmética Janssen Cosmetics. Pide cita: 630 47 20 46."}]
+21:["$","meta","16",{"name":"twitter:image","content":"https://durducco-source.github.io/pure-beauty-blanes-web/media/og-purebeauty.jpg"}]
+22:["$","meta","17",{"name":"twitter:image:width","content":"1200"}]
+23:["$","meta","18",{"name":"twitter:image:height","content":"630"}]
+24:["$","link","19",{"rel":"icon","href":"/pure-beauty-blanes-web/icon.svg"}]
+25:["$","link","20",{"rel":"apple-touch-icon","href":"/pure-beauty-blanes-web/apple-touch-icon.png"}]
+26:["$","$L2f","21",{}]
+27:["$","meta",null,{"name":"next-size-adjust","content":""}]
+6:300
+2e:null
+2a:true
+6:C
+29:0
+5:"$undefined"
+28:"$undefined"
+11:"$undefined"

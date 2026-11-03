@@ -1,0 +1,4 @@
+:HL["/pure-beauty-blanes-web/_next/static/chunks/1-7r1_msg9ep9.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
+0:{"b":"ojLE_Vo5iNqY7v2eRwnlT","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

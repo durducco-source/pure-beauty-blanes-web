@@ -1,0 +1,6 @@
+:HL["/pure-beauty-blanes-web/_next/static/chunks/1-7r1_msg9ep9.css","style"]
+:HL["/pure-beauty-blanes-web/_next/static/media/75cb990346c55dc4-s.p.40bho2kviej2o.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/pure-beauty-blanes-web/_next/static/media/a6fd56cd89ea0e72-s.p.1hij5ex6k3v9q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/pure-beauty-blanes-web/_next/static/media/cb4b92673aedbbad-s.p.0-95eo-012xnf.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"ojLE_Vo5iNqY7v2eRwnlT","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
