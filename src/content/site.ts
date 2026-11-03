@@ -1,12 +1,15 @@
-import type { SiteContent } from "./types";
+import type { Media, SiteContent } from "./types";
 
 // Contenido verificado en Instagram @centro.purebeauty (descripción, servicios, marcas y fotos)
 // y en fichas públicas del negocio (teléfono fijo, horario, email y valoración en Google).
-// Nota: las publicaciones de Instagram son de 2020, por eso no se muestran precios ni promociones.
+// Las publicaciones de Instagram son de 2020: no se muestran precios ni promociones; las fotos son recortes sin texto.
 const MOBILE = "+34630472046";
 const IG = "https://www.instagram.com/centro.purebeauty/";
-const MAPS = "https://www.google.com/maps/dir/?api=1&destination=Carrer+del+Forn+de+la+Cal%C3%A7+12,+17300+Blanes";
 const URL = "https://durducco-source.github.io/pure-beauty-blanes-web/";
+const MAPS = "https://www.google.com/maps/dir/?api=1&destination=Carrer+del+Forn+de+la+Cal%C3%A7+12,+17300+Blanes";
+
+const im = (name: string, alt: string): Media => ({ src: `/media/${name}.jpg`, alt });
+const cita = { label: "Pedir cita", href: `tel:${MOBILE}` };
 
 export const site: SiteContent = {
   lang: "es",
@@ -18,155 +21,73 @@ export const site: SiteContent = {
     url: URL,
     image: `${URL}media/og-purebeauty.jpg`,
     keywords: ["centro de estética Blanes", "tratamientos faciales Blanes", "láser Blanes", "HIFU Blanes", "Janssen Cosmetics Blanes", "Pure Beauty"],
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      name: "Pure Beauty · Centro de estética avanzado",
-      url: URL,
-      telephone: MOBILE,
-      email: "centro.purebeauty@gmail.com",
-      address: { "@type": "PostalAddress", streetAddress: "Carrer del Forn de la Calç, 12", addressLocality: "Blanes", postalCode: "17300", addressRegion: "Girona", addressCountry: "ES" },
-      openingHoursSpecification: [
-        { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "20:00" },
-        { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "14:00" },
-      ],
-      sameAs: [IG],
+  },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    name: "Pure Beauty · Centro de estética avanzado",
+    url: URL,
+    telephone: MOBILE,
+    email: "centro.purebeauty@gmail.com",
+    address: { "@type": "PostalAddress", streetAddress: "Carrer del Forn de la Calç, 12", addressLocality: "Blanes", postalCode: "17300", addressRegion: "Girona", addressCountry: "ES" },
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "20:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "14:00" },
+    ],
+    sameAs: [IG],
+  },
+  primary: { label: "Pedir cita", href: `tel:${MOBILE}`, icon: "phone" },
+  phone: MOBILE,
+
+  scenes: [
+    {
+      kind: "arrival", id: "inicio", n: "00", label: "Inicio",
+      a: im("facial-sonrisa", "Mujer sonriendo con la piel cuidada"),
+      kicker: "Centro de estética avanzado · Blanes", title: "Pure Beauty", sub: "Estudios 100% personalizados",
     },
-  },
-  nav: [
-    { label: "El centro", href: "#centro" },
-    { label: "Tratamientos", href: "#tratamientos" },
-    { label: "Servicios", href: "#servicios" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Contacto", href: "#contacto" },
+    {
+      kind: "pullback", id: "facial", n: "01", label: "Facial",
+      a: im("facial-calma", "Mujer con los ojos cerrados disfrutando de un cuidado facial"), origin: "55% 40%",
+      b: im("facial-cuidado", "Cuidado facial"),
+      title: "Ama y cuida tu piel", sub: "Tratamientos faciales personalizados para cada tipo de piel, también la sensible.", cta: cita,
+    },
+    {
+      kind: "depth", id: "laser", n: "02", label: "Láser",
+      back: im("laser-tratamiento", "Tratamiento láser facial con gafas de protección"),
+      cards: [im("laser-hifu", "Tratamiento con láser HIFU")],
+      title: "Tecnología láser y HIFU", sub: "Equipos de tecnología láser y un equipo con años de experiencia en su manejo.",
+    },
+    {
+      kind: "list", id: "servicios", n: "03", label: "Servicios",
+      back: im("cosmetica-janssen", "Productos Janssen Cosmetics para piel sensible"),
+      title: "Todo lo que *te ofrecemos*",
+      groups: [
+        { name: "Facial y láser", items: [{ name: "Tratamientos faciales", detail: "Personalizados según tu tipo de piel" }, { name: "Tratamientos láser", detail: "Para los problemas de la piel" }, { name: "Láser HIFU", detail: "Ultrasonidos focalizados" }] },
+        { name: "Corporal y bienestar", items: [{ name: "Tratamientos corporales", detail: "Estudio 100% personalizado" }, { name: "Tratamientos dietéticos", detail: "Asesoramiento y seguimiento" }, { name: "Nutricosmética", detail: "Belleza desde el interior" }] },
+        { name: "Productos", items: [{ name: "Janssen Cosmetics", detail: "Cosmética profesional para la piel" }, { name: "Perfumes Essens", detail: "Catálogo disponible en el centro" }] },
+      ],
+      note: "Cada tratamiento empieza con un estudio personalizado. Precios y disponibilidad por teléfono.",
+      cta: cita,
+    },
+    {
+      kind: "finale", id: "cita", n: "04", label: "Cita",
+      a: im("facial-cuidado", "Cuidado facial en Pure Beauty"),
+      title: "Tu piel *te lo agradecerá*",
+      ctas: [{ label: "Llamar y pedir cita", href: `tel:${MOBILE}` }, { label: "Cómo llegar", href: MAPS, external: true }, { label: "Escribir un email", href: "mailto:centro.purebeauty@gmail.com" }],
+      info: [
+        { label: "Dirección", value: "C/ Forn de la Calç, 12 · Blanes", href: MAPS },
+        { label: "Horario", value: "L–V 10–20 h · S 10–14 h" },
+      ],
+    },
   ],
-  cta: { label: "Pedir cita", href: `tel:${MOBILE}` },
-  hero: {
-    scrollHint: "Desliza",
-    acts: [
-      { label: "Primer acto", title: "Ama y cuida *tu piel.*", text: "Centro de estética avanzado en Blanes: tratamientos faciales, corporales y dietéticos.", media: { type: "image", src: "/media/facial-sonrisa.jpg", alt: "Mujer sonriendo con la piel cuidada" } },
-      { label: "Segundo acto", title: "La *tecnología.*", text: "Equipos con la más moderna tecnología láser para el tratamiento de la piel.", media: { type: "image", src: "/media/laser-tratamiento.jpg", alt: "Tratamiento láser facial con gafas de protección" } },
-      { label: "Tercer acto", title: "La *experiencia.*", text: "Un equipo con años de experiencia en el manejo de los equipos, para mejores resultados.", media: { type: "image", src: "/media/facial-cuidado.jpg", alt: "Cuidado facial" } },
-      { label: "Cuarto acto", title: "Tu *ritual.*", text: "Cosmética profesional Janssen Cosmetics para continuar el cuidado en casa.", media: { type: "image", src: "/media/cosmetica-janssen.jpg", alt: "Productos Janssen Cosmetics para piel sensible" } },
-    ],
+
+  footer: {
+    address: { label: "C/ Forn de la Calç, 12 · 17300 Blanes", href: MAPS },
+    contacts: [{ label: "630 47 20 46", href: `tel:${MOBILE}` }, { label: "972 33 03 84", href: "tel:+34972330384" }, { label: "centro.purebeauty@gmail.com", href: "mailto:centro.purebeauty@gmail.com" }],
+    hours: [{ day: "Lunes a viernes", value: "10–20 h" }, { day: "Sábado", value: "10–14 h" }, { day: "Domingo", value: "Cerrado" }],
+    hoursNote: "Horario según fichas públicas: confírmalo al pedir cita.",
+    socials: [{ label: "Instagram", href: IG }],
+    sources: "Fotos: Instagram @centro.purebeauty (2020)",
+    line: "© 2026 Pure Beauty · Centro de estética avanzado · Blanes",
   },
-  intro: {
-    id: "centro",
-    eyebrow: "El centro",
-    title: "Estudios *100% personalizados.*",
-    paragraphs: [
-      "Pure Beauty es un centro especializado en todo tipo de tratamientos corporales, faciales y dietéticos, con estudios 100% personalizados para cada persona.",
-      "Brindamos a tu piel y a tu cuerpo el cuidado necesario, con tecnología láser, cosmética profesional y asesoramiento en nutricosmética. Te esperamos en el centro de Blanes.",
-    ],
-    stats: [
-      { value: "4,9", label: "Google · 13 reseñas" },
-      { value: "100%", label: "Personalizado" },
-      { value: "Láser", label: "Tecnología avanzada" },
-      { value: "Blanes", label: "C/ Forn de la Calç" },
-    ],
-  },
-  chapters: {
-    id: "tratamientos",
-    eyebrow: "Tratamientos",
-    title: "Rostro, cuerpo *y bienestar.*",
-    items: [
-      {
-        label: "Facial",
-        title: "Cuidado *facial.*",
-        text: "Tratamientos faciales personalizados para cada tipo de piel, también para pieles sensibles: limpieza, hidratación y cuidado del rostro.",
-        bullets: ["Estudio personalizado de la piel", "Tratamientos para piel sensible", "Cosmética Janssen Cosmetics"],
-        media: { type: "image", src: "/media/facial-calma.jpg", alt: "Mujer con los ojos cerrados disfrutando de un cuidado facial" },
-        link: { label: "Pedir cita", href: `tel:${MOBILE}` },
-      },
-      {
-        label: "Láser y HIFU",
-        title: "Tecnología *láser.*",
-        text: "Amplia gama de equipos con tecnología láser para el tratamiento de los problemas de la piel, y láser HIFU (ultrasonidos) para el rostro.",
-        bullets: ["Tratamientos con tecnología láser", "HIFU · ultrasonidos focalizados", "Equipo con años de experiencia"],
-        media: { type: "image", src: "/media/laser-hifu.jpg", alt: "Tratamiento con láser HIFU" },
-        link: { label: "Consultar tratamiento", href: `tel:${MOBILE}` },
-      },
-      {
-        label: "Corporal y dietético",
-        title: "Cuidarse *desde dentro.*",
-        text: "Tratamientos corporales y dietéticos, y asesoramiento en nutricosmética: un complemento de la rutina de belleza para mejorar piel y pelo desde el interior.",
-        bullets: ["Tratamientos corporales", "Asesoramiento dietético", "Nutricosmética"],
-        media: { type: "image", src: "/media/facial-sonrisa.jpg", alt: "Mujer sonriendo" },
-      },
-    ],
-  },
-  menu: {
-    id: "servicios",
-    eyebrow: "Servicios",
-    title: "Todo lo que *te ofrecemos.*",
-    intro: "Cada tratamiento empieza con un estudio personalizado. Para precios y disponibilidad, llámanos o pásate por el centro.",
-    groups: [
-      { name: "Facial", items: [
-        { name: "Tratamientos faciales", detail: "Personalizados según tu tipo de piel" },
-        { name: "Cuidado de piel sensible", detail: "Limpieza suave y tónico calmante" },
-      ] },
-      { name: "Láser", items: [
-        { name: "Tratamientos láser", detail: "Para los problemas de la piel" },
-        { name: "Láser HIFU", detail: "Ultrasonidos focalizados" },
-      ] },
-      { name: "Corporal", items: [
-        { name: "Tratamientos corporales", detail: "Estudio 100% personalizado" },
-        { name: "Tratamientos dietéticos", detail: "Asesoramiento y seguimiento" },
-        { name: "Nutricosmética", detail: "Belleza desde el interior" },
-      ] },
-      { name: "Productos", items: [
-        { name: "Janssen Cosmetics", detail: "Cosmética profesional para el cuidado de la piel" },
-        { name: "Perfumes Essens", detail: "20% de esencia aromática, sin parabenos · catálogo en el centro" },
-      ] },
-    ],
-    note: "Pide cita en el 630 47 20 46 o en el 972 33 03 84.",
-  },
-  gallery: {
-    id: "galeria",
-    eyebrow: "Galería",
-    title: "Belleza *y salud.*",
-    items: [
-      { type: "image", src: "/media/facial-cuidado.jpg", alt: "Cuidado facial" },
-      { type: "image", src: "/media/laser-tratamiento.jpg", alt: "Tratamiento láser" },
-      { type: "image", src: "/media/facial-calma.jpg", alt: "Piel cuidada" },
-      { type: "image", src: "/media/cosmetica-janssen.jpg", alt: "Cosmética Janssen Cosmetics" },
-      { type: "image", src: "/media/laser-hifu.jpg", alt: "Láser HIFU" },
-      { type: "image", src: "/media/facial-sonrisa.jpg", alt: "Sonrisa y piel luminosa" },
-    ],
-  },
-  faq: {
-    eyebrow: "Preguntas",
-    title: "Antes de *tu cita.*",
-    items: [
-      { q: "¿Cómo pido cita?", a: "Llámanos al 630 47 20 46 o al 972 33 03 84, o pásate por el centro en la C/ Forn de la Calç, 12, en Blanes." },
-      { q: "¿Los tratamientos son personalizados?", a: "Sí. Hacemos estudios 100% personalizados para elegir el tratamiento facial, corporal o dietético que mejor se adapta a ti." },
-      { q: "¿Qué es la nutricosmética?", a: "Es un complemento de la rutina de belleza que ayuda a mejorar la piel y el pelo desde el interior. Infórmate en el centro." },
-      { q: "¿Puedo comprar productos en el centro?", a: "Sí: trabajamos con Janssen Cosmetics y tenemos el catálogo de perfumes Essens a tu disposición." },
-    ],
-  },
-  contact: {
-    id: "contacto",
-    eyebrow: "Contacto",
-    title: "Te esperamos *en Blanes.*",
-    address: ["C/ Forn de la Calç, 12", "17300 Blanes (Girona)"],
-    directionsUrl: MAPS,
-    mapEmbed: "https://www.google.com/maps?q=Carrer+del+Forn+de+la+Cal%C3%A7+12,+17300+Blanes&z=17&output=embed",
-    phone: { label: "630 47 20 46", href: `tel:${MOBILE}` },
-    email: { label: "centro.purebeauty@gmail.com", href: "mailto:centro.purebeauty@gmail.com" },
-    hours: [
-      { day: "Lunes a viernes", value: "10:00–20:00" },
-      { day: "Sábado", value: "10:00–14:00" },
-      { day: "Domingo", value: "Cerrado" },
-    ],
-    hoursNote: "Horario según fichas públicas del centro. Te recomendamos confirmar tu cita por teléfono (también 972 33 03 84).",
-    socials: [{ label: "Instagram de Pure Beauty", href: IG, icon: "instagram" }],
-  },
-  finale: {
-    title: "Tu piel *te lo agradecerá.*",
-    text: "Reserva tu estudio personalizado en Pure Beauty.",
-    cta: { label: "Llamar y pedir cita", href: `tel:${MOBILE}` },
-    media: { type: "image", src: "/media/facial-calma.jpg", alt: "" },
-  },
-  floating: { label: "Pedir cita", href: `tel:${MOBILE}`, icon: "phone" },
-  footer: { line: "© 2026 Pure Beauty · Centro de estética avanzado · Blanes", credit: "Diseño web por DURDUC" },
 };

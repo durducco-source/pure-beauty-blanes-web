@@ -1,29 +1,19 @@
+import Header from "@/components/Header";
+import Hud from "@/components/Hud";
+import Providers from "@/components/Providers";
+import { Footer, SceneView } from "@/components/scenes";
 import { site } from "@/content/site";
-import CinemaHero from "@/components/CinemaHero";
-import Gallery from "@/components/Gallery";
-import Menu from "@/components/Menu";
-import Nav from "@/components/Nav";
-import Reels from "@/components/Reels";
-import { Chapters, Contact, Faq, Finale, FloatingCta, Footer, Intro, Reviews } from "@/components/Sections";
 
+// La web es un único recorrido cinematográfico: las escenas (y su orden) se definen en src/content/site.ts.
 export default function Home() {
   return (
-    <>
-      <Nav site={site} />
+    <Providers>
+      <Header />
       <main id="contenido">
-        <CinemaHero acts={site.hero.acts} scrollHint={site.hero.scrollHint} />
-        <Intro site={site} />
-        <Chapters site={site} />
-        <Menu site={site} />
-        <Gallery site={site} />
-        <Reels site={site} />
-        <Reviews site={site} />
-        <Faq site={site} />
-        <Contact site={site} />
-        <Finale site={site} />
+        {site.scenes.map((s) => <SceneView key={s.id} s={s} />)}
       </main>
-      <Footer site={site} />
-      <FloatingCta site={site} />
-    </>
+      <Footer />
+      <Hud />
+    </Providers>
   );
 }
